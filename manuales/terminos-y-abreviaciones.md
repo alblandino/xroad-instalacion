@@ -40,3 +40,27 @@ Los servidores de seguridad son el punto de entrada a toda la red y es necesario
 - *sellado de tiempo y registro*
 
 Para el sistema de información de un consumidor de servicios y un proveedor de servicios, Security Server ofrece un protocolo de mensajes basado en REST y otro basado en SOAP. El protocolo es el mismo para el cliente y el proveedor de servicios, lo que hace que Security Server sea transparente para las aplicaciones.
+
+
+
+##### CSR - Solicitud de firma de Certificado
+
+Es un mensaje enviado por un solicitante a una autoridad de registro de la infraestructura de clave pública para solicitar un certificado de identidad digital. Por lo general, contiene la clave pública para la cual se debe emitir el certificado, información de identificación (como un nombre de dominio) y protección de la integridad (por ejemplo, una firma digital).
+
+Se genera en el servidor de seguridad para una determinada autoridad de certificación aprobada para firmar una clave pública e información asociada.
+
+
+
+##### OCSP - Protocolo de estado de certificado en línea
+
+Es un método para determinar el estado de vigencia de un certificado digital X. 509 usando otros medios que no sean el uso de CRL (Listas de Revocación de Certificados).
+
+
+
+##### Subsistemas
+
+Representa una parte del sistema de información de un miembro de la red Los miembros de X-Road deben declarar partes de su sistema de información como subsistemas para usar o proporcionar los servicios de X-Road.
+
+- Los derechos de acceso de los subsistemas de los miembros de X-Road son independientes: los derechos de acceso otorgados a un subsistema no afectan los derechos de acceso de los otros subsistemas de los miembros.
+- Los servicios proporcionados por un subsistema son independientes de los servicios proporcionados por los otros subsistemas de los miembros.
+- Para firmar los mensajes enviados por un subsistema al utilizar o prestar los servicios de X-Road, se utiliza el certificado de firma del miembro que gestiona el subsistema. Un miembro de X-Road puede asociar varios subsistemas diferentes con un servidor de seguridad, y un subsistema puede asociarse con varios servidores de seguridad.
