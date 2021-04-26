@@ -2,13 +2,13 @@
 
 ------
 
-#### Términos y abreviaciones
+### Términos y abreviaciones
 
 > Estos son los términos y abreviaciones comúnmente utilizados dentro de toda la red de X-Road, para un claro entendimiento del escenario es imprescindible entender estos conceptos básicos.
 
 
 
-##### **CA - Autoridad Certificadora**
+#### **CA - Autoridad Certificadora**
 
 La autoridad certificadora (CA) emite certificados para los servidores de seguridad (certificados de autenticación) y las organizaciones miembros  (certificados de firma). Los certificados de autenticación se utilizan para proteger la conexión entre dos servidores de seguridad. Los certificados de firma se utilizan para firmar digitalmente los mensajes enviados por los miembros de la red y solo se pueden utilizar los certificados emitidos por autoridades de certificación de confianza que están definidas en el servidor central.
 
@@ -16,7 +16,7 @@ Los servidores de seguridad verifican la validez de los certificados de firma y 
 
 
 
-##### **TSA - Autoridad de Sellado de Tiempo**
+#### **TSA - Autoridad de Sellado de Tiempo**
 
 Todos los mensajes enviados a través de la red tienen una marca de tiempo y el servidor de seguridad los registra. El propósito del sellado de tiempo es certificar la existencia de elementos de datos en un momento determinado. La TSA proporciona un servicio de sellado de tiempo que los servidores de seguridad utilizan para marcar el tiempo de todas las solicitudes/respuestas entrantes/salientes. Solo se pueden utilizar las TSA de confianza definidas en el servidor de configuraciones central.
 
@@ -24,13 +24,13 @@ La autoridad de sellado de tiempo debe implementar el protocolo de sellado de ti
 
 
 
-##### **CS - Servidor de Configuraciones Central**
+#### **CS - Servidor de Configuraciones Central**
 
 Los servicios centrales constan de servidor central y proxy de configuración. El servidor central contiene el registro de los miembros de la red y sus servidores de seguridad. Además, el servidor central contiene la política de seguridad de la instancia de toda la red que incluye una lista de autoridades de certificación confiables (CA), una lista de autoridades confiables de sellado de tiempo (TSA) y parámetros de configuración. Tanto el registro de miembros como la política de seguridad están disponibles para los servidores de seguridad a través del protocolo HTTP. Este conjunto distribuido de datos forma la configuración global que utilizan los servidores de seguridad para mediar en los mensajes enviados a través de X-Rola redad.
 
 
 
-##### **SS - Servidores de Seguridad**
+#### **SS - Servidores de Seguridad**
 
 Los servidores de seguridad son el punto de entrada a toda la red y es necesario tanto para producir como para consumir servicios a través de X-Road. Los servidores de seguridad encapsulan los aspectos de seguridad de la infraestructura de toda la red
 
@@ -43,7 +43,7 @@ Para el sistema de información de un consumidor de servicios y un proveedor de 
 
 
 
-##### CSR - Solicitud de firma de Certificado
+#### CSR - Solicitud de firma de Certificado
 
 Es un mensaje enviado por un solicitante a una autoridad de registro de la infraestructura de clave pública para solicitar un certificado de identidad digital. Por lo general, contiene la clave pública para la cual se debe emitir el certificado, información de identificación (como un nombre de dominio) y protección de la integridad (por ejemplo, una firma digital).
 
@@ -51,13 +51,13 @@ Se genera en el servidor de seguridad para una determinada autoridad de certific
 
 
 
-##### OCSP - Protocolo de estado de certificado en línea
+#### OCSP - Protocolo de estado de certificado en línea
 
 Es un método para determinar el estado de vigencia de un certificado digital X. 509 usando otros medios que no sean el uso de CRL (Listas de Revocación de Certificados).
 
 
 
-##### Subsistemas
+#### Subsistemas
 
 Representa una parte del sistema de información de un miembro de la red Los miembros de X-Road deben declarar partes de su sistema de información como subsistemas para usar o proporcionar los servicios de X-Road.
 
